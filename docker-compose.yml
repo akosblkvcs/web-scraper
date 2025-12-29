@@ -1,0 +1,24 @@
+services:
+  db:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: web-scraper
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  app:
+    build: .
+    depends_on:
+      - db
+    env_file:
+      - .env
+    working_dir: /app
+    command: ["sleep", "infinity"]
+
+volumes:
+  db_data:

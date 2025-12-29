@@ -1,0 +1,10 @@
+alembic
+APScheduler
+cssselect
+environs
+lxml
+lxml-stubs
+psycopg2-binary
+requests
+SQLAlchemy
+types-lxml
