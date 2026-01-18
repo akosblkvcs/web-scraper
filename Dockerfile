@@ -8,6 +8,8 @@ COPY requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
+COPY alembic.ini ./alembic.ini
+COPY db ./db
 COPY src ./src
 
 ENV PYTHONPATH=/app
