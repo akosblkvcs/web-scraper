@@ -37,8 +37,8 @@ def upgrade() -> None:
             'https://www.arukereso.hu/projektor-c88/xgimi/mogo-4-laser-wk03k-p1208819068/',
             'css',
             '.row-price > span',
-            'min_price',
-            '{"product_name": "XGIMI MoGo 4 Laser", "currency": "HUF"}',
+            'min_value',
+            '{}',
             TRUE
         );
         """
